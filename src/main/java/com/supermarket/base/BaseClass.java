@@ -41,7 +41,7 @@ public class BaseClass {
 	}
 
 	@BeforeMethod(enabled=true,alwaysRun=true)
-	public void setup() {
+	public void setups() {
 		prophandler = new PropHandler();
 		String url = prophandler.getPropertiesFileData("url");
 		String browser = prophandler.getPropertiesFileData("browser");
