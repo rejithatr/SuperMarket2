@@ -10,7 +10,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.beust.jcommander.Parameters;
 import com.supermarket.utilities.PropHandler;
 import com.supermarket.utilities.ScreenShot;
 import com.supermarket.utilities.WaitUtility;
@@ -50,6 +49,9 @@ public class BaseClass {
 
 	}
 	
+	//for running crossbrowser
+	// enabled=false , it will not execute the program
+	
 	@org.testng.annotations.Parameters("browser")
 	@BeforeMethod(enabled=false,alwaysRun=true)
 	public void setUpCrossBrowser(String browser) {
@@ -60,7 +62,7 @@ public class BaseClass {
 
 
 	@AfterMethod(alwaysRun=true)
-	public void tearDown(ITestResult itestresult) {
+	public void termination(ITestResult itestresult) {
 		screenshot = new ScreenShot();
 		if (itestresult.getStatus() == ITestResult.FAILURE) {
 			String testCaseName = itestresult.getName();

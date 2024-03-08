@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel Excution" thread-count="3" parallel="tests">
+<suite name="Parallel Execution" thread-count="3" parallel="tests">
 <listeners>
 <listener class-name="com.supermarket.listeners.ExtentReporter"></listener>
 </listeners>
@@ -9,6 +9,7 @@
 <class name="com.supermarket.tests.LoginTest"></class>
 </classes>
 </test>
+
 <test name="smoke">
 <classes>
 

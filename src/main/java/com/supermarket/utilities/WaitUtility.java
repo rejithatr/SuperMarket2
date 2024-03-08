@@ -1,5 +1,7 @@
 package com.supermarket.utilities;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,7 +21,7 @@ public class WaitUtility {
 
 	
 	 public void waitForElementToBeClickable(String xpath) {
-		 wait= new WebDriverWait(driver, EXPLICIT_WAIT);
+		// wait= new WebDriverWait(driver, EXPLICIT_WAIT);
 		 wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 	 }
 

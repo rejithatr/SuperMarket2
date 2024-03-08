@@ -53,7 +53,7 @@ public class PageUtility {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		while (checkStatus(element)) {
 			js.executeScript("window.scrollBy( 0 ," + y + ")");
-			y = y + 50;
+			y = y + 100;
 		}
 
 	}
@@ -94,4 +94,15 @@ public class PageUtility {
 		element.click();
 	}
 
+	
+	public boolean isClicked(WebElement element)
+	{
+		try {
+			element.click();
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
 }

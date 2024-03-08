@@ -12,6 +12,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import com.github.javafaker.Address;
+import com.github.javafaker.Faker;
 import com.supermarket.base.BaseClass;
 
 public class GeneralUtility {
@@ -53,7 +55,7 @@ public class GeneralUtility {
 	}
 
 	public void getListofElements(String xpathExpression) {
-		List<String> ListNames = new ArrayList<String>();
+		//List<String> ListNames = new ArrayList<String>();
 		List<WebElement> elements = driver.findElements(By.xpath(xpathExpression));
 		for (WebElement listName : elements) {
 			System.out.println(listName.getText());
@@ -66,7 +68,7 @@ public class GeneralUtility {
 	}
 
 	public String searchElementBySendKeys(String xpathExpression, String itemName) {
-		Actions action = new Actions(driver);
+		//Actions action = new Actions(driver);
 		WebElement search = driver.findElement(By.xpath(xpathExpression));
 		search.sendKeys(itemName + Keys.ENTER);
 		return itemName;
@@ -99,5 +101,12 @@ public class GeneralUtility {
 			}
 
 		}return null;
+	}
+	
+	public static Address getName()
+	{
+		Faker faker = new Faker();
+		Address streetName = faker. address();
+		return streetName;
 	}
 }
