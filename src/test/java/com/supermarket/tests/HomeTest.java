@@ -23,12 +23,12 @@ public class HomeTest extends BaseClass {
 		homepage.getAlltheTilesFromHomPage();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, retryAnalyzer=com.supermarket.listeners.RetryAnalyzer.class)
 	public void verifyManagePageisAvailable() {
 		loginpage = new LoginPage(driver);
 		homepage = new HomePage(driver);
 		loginpage.loginUtility();
-		String expectedInfoMessage = "Manage Pages";
+		String expectedInfoMessage = "Manage Pages12";
 		boolean status = homepage.isPresentManagePage(expectedInfoMessage);
 		Assert.assertTrue(status);
 	}
