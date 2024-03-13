@@ -1,7 +1,7 @@
 package com.supermarket.base;
 
 import java.util.concurrent.TimeUnit;
-
+//selenium
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
